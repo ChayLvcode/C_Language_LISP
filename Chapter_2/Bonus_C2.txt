@@ -1,0 +1,17 @@
+If a C program does not have a main function, the compilation process itself usually won't produce an error, as the compiler's job is to convert source code into machine code and it does not check the logical structure of the program. However, during the linking stage (a part of the compilation process that creates an executable file), the linker will produce an error because it cannot find the program's entry point.
+
+In C language, the main function is the entry point of the program, meaning the execution of the program starts from the main function. Without a main function, the linker does not know where to start the execution of the program. 
+
+
+
+The puts function is a standard C library function that is used to write a string to stdout (standard output), typically the console or terminal. It is included in the <stdio.h> header file. The usage of puts is quite straightforward:
+int puts(const char *str);
+
+Parameters
+str: A pointer to a null-terminated string that you want to output.
+Return Value
+On success, puts returns a non-negative integer.
+On failure, it returns EOF (end-of-file indicator).
+Description
+The puts function writes the string pointed to by str to stdout and appends a newline character (\n) at the end. This is a key difference from the printf function, which doesn't append a newline unless explicitly included in the format string.
+It is used for simple output operations where formatting is not required.
