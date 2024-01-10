@@ -1,0 +1,83 @@
+-Integer Types:
+int: Standard integer type, typically 32 bits.
+short: Short integer, usually 16 bits.
+long: Long integer, at least 32 bits, sometimes 64 bits.
+long long: An even longer integer, typically 64 bits.
+For all integer types, you can use signed and unsigned modifiers to specify whether negative values are included.
+Character Types:
+
+char: Used to store a single character. It is 8 bits on most systems.
+signed char: Explicitly representing a signed character.
+unsigned char: Explicitly representing an unsigned character.
+Floating-Point Types:
+
+float: Single precision floating-point type.
+double: Double precision floating-point type.
+long double: Extended precision floating-point type.
+Boolean Type:
+
+_Bool: Boolean type, representing true (non-zero value) or false (zero).
+Void Type:
+
+void: Represents no type. Often used to specify functions without a return value or pointers with unspecified type.
+Enumeration Type:
+
+enum: Used to define a collection of constants represented by names.
+Compound Types:
+
+These are not basic types but are composed of basic types, such as arrays, structures (struct), unions (union), and pointers.
+
+
+-Equal to: =
+Not equal to: !=
+Greater or equal to: >=
+Less than or equal to: <=
+
+-* / %
+
+-The do...while loop is a loop control structure in the C language. It executes the statements in the loop body at least once, and then decides whether to continue the loop based on a conditional expression. Its characteristic is to first execute the statements in the loop body and then check the loop conditions.
+Example:
+do {
+        printf("Count: %d\n", count);
+        count++;
+    } while (count < 5);
+
+-The switch statement is a multi-way branch statement in C language used to execute different code blocks according to different situations. It is a control structure that is often used to replace multiple if-else if-else statements to make the code clearer and easier to read.
+Example:
+switch (expression) {
+    case value1:
+        // code to be executed if expression equals value1
+        break;
+    case value2:
+        // code to be executed if expression equals value2
+        break;
+    // more cases...
+    default:
+        // code to be executed if expression doesn't match any case
+}
+
+-In C language, the break keyword is mainly used in two situations: terminating a loop and exiting a switch statement.
+
+-In C language, the continue keyword is used to skip the remainder of the current loop and immediately start the next iteration of the loop. It can only be used inside for, while and do-while loops. When using continue, the current iteration of the loop is interrupted, but the loop itself does not end. Control flow jumps to the next iteration of the loop, which re-evaluates the condition of the loop.
+Example:
+for(int i = 0; i < 10; i++) {
+    if (i % 2 == 0) {
+        continue;  // 对偶数，跳过当前迭代的剩余部分
+    }
+    printf("%d\n", i);  // 只有奇数会被打印
+}
+
+-In C language, the typedef keyword is used to create a new alias for an existing data type. This can make complex type declarations more concise and easier to understand, and also helps improve the readability and maintainability of code.
+Suppose we have:
+struct point {
+    int x;
+    int y;
+};
+
+Use typedef to make a new name for this struct:
+typedef struct point Point;
+
+And we can use Point to call this kind of struct:
+Point p1, p2;
+
+
