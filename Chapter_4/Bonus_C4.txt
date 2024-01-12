@@ -1,0 +1,57 @@
+-'\n' works like a the function of 'enter', giving you extra lines of text.
+
+-
+Integer:
+
+%d or %i: Output decimal integer.
+%u: Output unsigned decimal integer.
+%o: Output octal integer.
+%x or %X: Output hexadecimal integers (%x outputs lowercase letters, %X outputs uppercase letters).
+Floating point numbers and double precision numbers:
+
+%f: Output decimal floating point number.
+%e or %E: Output a floating-point number in exponential form (%e outputs lowercase letter 'e', ​​%E outputs uppercase letter 'E').
+%g or %G: Depending on the size of the value, %f or %e is automatically selected (%g uses lowercase letters, %G uses uppercase letters).
+Characters and strings:
+
+%c: Output a single character.
+%s: output string.
+pointer:
+
+%p: The address of the output pointer.
+Percent sign:
+
+%%: Output the % symbol.
+You can also include options such as width, precision, and flags in the format specifier to control the format of the output:
+
+Width: Specify the minimum number of output characters, such as %5d to specify a width of at least 5 characters.
+Precision: For floating point numbers, specify the number of digits after the decimal point, such as %.2f means retaining two decimal places.
+
+-
+Undefined behavior: The most common result is undefined behavior. This means that the program may produce unpredictable results. It could be bad output, garbage values, program crashes, or even memory corruption.
+
+Incorrect output: If the passed value types do not match, printf may incorrectly interpret the data in memory, resulting in unexpected output. For example, if a floating point number is incorrectly formatted as an integer, the output will be meaningless.
+
+Program crash: In some cases, especially when pointer types are misinterpreted, the program may access illegal memory areas, causing the program to crash.
+
+Security Hazard: Mismatched printf calls may introduce security vulnerabilities. Especially when processing user-supplied data, incorrectly formatted strings can be exploited to execute code or leak memory information.
+
+-
+In C language, the preprocessor directive #ifndef is used to check whether a macro is not defined. If the specified macro is not defined, the preprocessor will execute the code immediately following it until an #endif directive is encountered.
+
+If you want to compile a section only if a specified expression is defined using #define, use an #ifdef statement. If you only want to compile a section if the specified expression is not defined, use #ifndef.
+
+-
+In C language, the preprocessor directive #define is used to define macros
+
+-
+You can find in the code part:
+#ifdef __linux__
+#include <editline/readline.h>
+#include <editline/history.h>
+#endif
+
+#ifdef __MACH__
+#include <editline/readline.h>
+#endif
+#endif
